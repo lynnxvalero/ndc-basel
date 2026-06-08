@@ -24,6 +24,10 @@ function renderArtikel() {
     .map(p => `<p>${p.trim()}</p>`)
     .join('');
 
+  const coverImg = post.image
+    ? `<div class="artikel-cover"><img src="${post.image}" alt="${post.title[t.current]}"></div>`
+    : '';
+
   main.innerHTML = `
     <div class="page-hero artikel-hero">
       <div class="container">
@@ -36,7 +40,7 @@ function renderArtikel() {
         <p class="artikel-excerpt">${post.excerpt[t.current]}</p>
       </div>
     </div>
-
+    ${coverImg}
     <section class="section reveal">
       <div class="container artikel-body">
         ${body}

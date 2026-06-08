@@ -702,6 +702,7 @@ const STUDIO_STATS = [
 const NEWS = [
   {
     id:'tremendous-meisterschaft-2026',
+    image: null,
     date:'2026-03-10',
     category_de:'Erfolg', category_en:'Achievement',
     title_de:'Tremendous glänzt bei nationaler Meisterschaft',
@@ -729,6 +730,7 @@ We congratulate all members warmly and look forward to the next season!`,
   },
   {
     id:'neue-kurse-juni-2026',
+    image: null,
     date:'2026-04-15',
     category_de:'Kurse', category_en:'Classes',
     title_de:'Neue Kurse ab Juni 2026',
@@ -760,6 +762,7 @@ All new courses begin in the week of June 2nd. The trial class is as always free
   },
   {
     id:'summer-showcase-2026',
+    image: null,
     date:'2026-05-20',
     category_de:'Event', category_en:'Event',
     title_de:'Anmeldung Summer Showcase 2026 jetzt offen',
@@ -864,6 +867,7 @@ Questions? Just email jasminweder@magnet.ch. We look forward to an unforgettable
       title:    { de: n.title_de,    en: n.title_en    },
       excerpt:  { de: n.excerpt_de,  en: n.excerpt_en  },
       content:  { de: n.content_de,  en: n.content_en  },
+      image:    n.image || null,
     }));
   }
 

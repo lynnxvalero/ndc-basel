@@ -84,16 +84,20 @@ function renderNews() {
 
   grid.innerHTML = NDC.news.map(post => {
     const date = formatDate(post.date, t.current);
+    const img = post.image ? `<div class="news-card-img"><img src="${post.image}" alt="${post.title[t.current]}" loading="lazy"></div>` : '';
     return `
-      <article class="news-card">
-        <div class="news-card-top">
-          <span class="news-cat">${post.category[t.current]}</span>
-          <span class="news-date">${date}</span>
+      <a href="${withLang('artikel.html')}&id=${post.id}" class="news-card">
+        ${img}
+        <div class="news-card-body">
+          <div class="news-card-top">
+            <span class="news-cat">${post.category[t.current]}</span>
+            <span class="news-date">${date}</span>
+          </div>
+          <h3 class="news-title">${post.title[t.current]}</h3>
+          <p class="news-excerpt">${post.excerpt[t.current]}</p>
+          <span class="news-more">${t.t('news_more')}</span>
         </div>
-        <h3 class="news-title">${post.title[t.current]}</h3>
-        <p class="news-excerpt">${post.excerpt[t.current]}</p>
-        <span class="news-more">${t.t('news_more')}</span>
-      </article>`;
+      </a>`;
   }).join('');
 }
 

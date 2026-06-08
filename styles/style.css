@@ -3,9 +3,9 @@
 :root {
   --bg:          #080808;
   --surface:     #111111;
-  --accent:      #C8FF00;
-  --accent-dim:  rgba(200, 255, 0, 0.07);
-  --accent-glow: rgba(200, 255, 0, 0.22);
+  --accent:      #31A4C6;
+  --accent-dim:  rgba(49, 164, 198, 0.07);
+  --accent-glow: rgba(49, 164, 198, 0.22);
   --text:        #ffffff;
   --muted:       #777777;
   --border:      rgba(255, 255, 255, 0.08);
@@ -229,7 +229,7 @@ img { max-width: 100%; display: block; }
   border-color: var(--accent);
   color: var(--accent);
   transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(200,255,0,0.08);
+  box-shadow: 0 8px 24px rgba(49,164,198,0.08);
 }
 
 .btn-ghost:active {
@@ -471,7 +471,7 @@ img { max-width: 100%; display: block; }
   transition: transform var(--dur-mid) var(--spring);
 }
 
-.pillar-card:hover { background: rgba(200,255,0,0.04); transform: translateY(-4px); }
+.pillar-card:hover { background: rgba(49,164,198,0.04); transform: translateY(-4px); }
 .pillar-card:hover::after { transform: scaleX(1); }
 
 .pillar-num {
@@ -516,7 +516,7 @@ img { max-width: 100%; display: block; }
   display: inline-block; font-family: var(--font-body); font-weight: 700;
   font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase;
   color: var(--accent); background: var(--accent-dim);
-  border: 1px solid rgba(200,255,0,0.2); padding: 0.3rem 0.75rem; margin-bottom: 1.5rem;
+  border: 1px solid rgba(49,164,198,0.2); padding: 0.3rem 0.75rem; margin-bottom: 1.5rem;
 }
 
 .crew-card h3 {
@@ -595,7 +595,7 @@ img { max-width: 100%; display: block; }
   font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; padding: 0.2rem 0.55rem; line-height: 1.4;
 }
 
-.heute-badge.neue { background: var(--accent-dim); color: var(--accent); border: 1px solid rgba(200,255,0,0.2); }
+.heute-badge.neue { background: var(--accent-dim); color: var(--accent); border: 1px solid rgba(49,164,198,0.2); }
 .heute-badge.show { background: rgba(167,139,250,0.1); color: #A78BFA; border: 1px solid rgba(167,139,250,0.2); }
 
 .card-body { display: flex; gap: 1rem; align-items: flex-start; }
@@ -714,13 +714,28 @@ img { max-width: 100%; display: block; }
 .news-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 3rem; }
 
 .news-card {
-  border: 1px solid var(--border); padding: 2rem;
-  display: flex; flex-direction: column; gap: 1rem;
+  border: 1px solid var(--border);
+  display: flex; flex-direction: column;
+  overflow: hidden;
   transition: border-color var(--dur-mid) var(--spring),
               background var(--dur-mid) var(--spring),
               transform var(--dur-mid) var(--spring),
               box-shadow var(--dur-mid) var(--spring);
   will-change: transform;
+}
+
+.news-card-img {
+  width: 100%; aspect-ratio: 16/9; overflow: hidden; flex-shrink: 0;
+}
+.news-card-img img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.5s var(--spring);
+  display: block;
+}
+.news-card:hover .news-card-img img { transform: scale(1.04); }
+
+.news-card-body {
+  padding: 1.75rem; display: flex; flex-direction: column; gap: 0.85rem; flex: 1;
 }
 
 .news-card:hover {
@@ -730,13 +745,13 @@ img { max-width: 100%; display: block; }
   box-shadow: 0 16px 32px rgba(0,0,0,0.3);
 }
 
-.news-card-top { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.news-card-top { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
 
 .news-cat {
   font-family: var(--font-body); font-weight: 700;
   font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase;
   color: var(--accent); background: var(--accent-dim);
-  border: 1px solid rgba(200,255,0,0.2); padding: 0.2rem 0.55rem;
+  border: 1px solid rgba(49,164,198,0.2); padding: 0.2rem 0.55rem;
 }
 
 .news-date { font-size: 0.78rem; color: var(--muted); }
@@ -773,6 +788,13 @@ img { max-width: 100%; display: block; }
 /* ── ARTIKEL DETAIL ─────────────────────────────────────────── */
 
 .artikel-hero { padding-bottom: 2rem; }
+
+.artikel-cover {
+  width: 100%; max-height: 520px; overflow: hidden;
+}
+.artikel-cover img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+}
 .artikel-hero h1 { font-size: clamp(2.5rem, 6vw, 5rem); line-height: 1.0; }
 
 .artikel-meta {
@@ -842,7 +864,7 @@ img { max-width: 100%; display: block; }
 .form-group input:focus,
 .form-group textarea:focus {
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(200,255,0,0.08);
+  box-shadow: 0 0 0 3px rgba(49,164,198,0.08);
 }
 
 .form-group input::placeholder,
@@ -1128,7 +1150,7 @@ img { max-width: 100%; display: block; }
 .teacher-card:hover .teacher-card-photo img { transform: scale(1.04); }
 
 .teacher-card.featured .teacher-card-photo {
-  border-bottom: 2px solid rgba(200,255,0,0.4);
+  border-bottom: 2px solid rgba(49,164,198,0.4);
 }
 
 .teacher-name {
@@ -1173,7 +1195,7 @@ img { max-width: 100%; display: block; }
 
 .teacher-avatar-xl {
   width: 100%; aspect-ratio: 3/4; max-height: 340px;
-  background: rgba(255,255,255,0.06); border: 1px solid rgba(200,255,0,0.2);
+  background: rgba(255,255,255,0.06); border: 1px solid rgba(49,164,198,0.2);
   display: flex; align-items: center; justify-content: center;
   font-family: var(--font-display); font-size: 4rem; color: rgba(255,255,255,0.15);
   overflow: hidden; margin-bottom: 0.5rem;
@@ -1285,7 +1307,7 @@ img { max-width: 100%; display: block; }
   padding: 0.2rem 0.55rem; margin-bottom: 0.75rem;
 }
 
-.event-type-badge.auftritt    { background: var(--accent-dim); color: var(--accent); border: 1px solid rgba(200,255,0,0.2); }
+.event-type-badge.auftritt    { background: var(--accent-dim); color: var(--accent); border: 1px solid rgba(49,164,198,0.2); }
 .event-type-badge.competition { background: rgba(167,139,250,0.1); color: #A78BFA; border: 1px solid rgba(167,139,250,0.2); }
 .event-type-badge.workshop    { background: rgba(96,165,250,0.1); color: #93C5FD; border: 1px solid rgba(96,165,250,0.2); }
 .event-type-badge.popup       { background: rgba(251,191,36,0.1); color: #FCD34D; border: 1px solid rgba(251,191,36,0.2); }
