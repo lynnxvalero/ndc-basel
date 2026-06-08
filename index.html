@@ -18,18 +18,28 @@
     <!-- ── HERO ───────────────────────────────────────────── -->
     <section class="hero" id="home">
       <div class="hero-inner container">
-        <p class="hero-eyebrow" data-i18n="hero_since">Basel · Seit 2001</p>
-        <h1 class="hero-title">
-          <span class="title-line solid" data-i18n="title_1">NEW</span>
-          <span class="title-line stroke" data-i18n="title_2">DANCE</span>
-          <span class="title-line solid" data-i18n="title_3">CENTER</span>
-        </h1>
-        <div class="hero-meta">
-          <p class="hero-desc" data-i18n="hero_desc">Über 25 Jahre Leidenschaft für urbanen Tanz in Basel. Flexible Kurse, echte Community, kein Jahresvertrag.</p>
-          <div class="hero-ctas">
-            <a href="kontakt.html" class="btn-primary" data-i18n="cta_trial">Gratis Probestunde</a>
-            <a href="stundenplan.html" class="btn-ghost" data-i18n="cta_schedule">Stundenplan</a>
+        <div class="hero-content">
+          <p class="hero-eyebrow" data-i18n="hero_since">Basel · Seit 2001</p>
+          <h1 class="hero-title">
+            <span class="title-line solid" data-i18n="title_1">NEW</span>
+            <span class="title-line stroke" data-i18n="title_2">DANCE</span>
+            <span class="title-line solid" data-i18n="title_3">CENTER</span>
+          </h1>
+          <div class="hero-meta">
+            <p class="hero-desc" data-i18n="hero_desc">Über 25 Jahre Leidenschaft für urbanen Tanz in Basel. Flexible Kurse, echte Community, kein Jahresvertrag.</p>
+            <div class="hero-ctas">
+              <a href="kontakt.html" class="btn-primary" data-i18n="cta_trial">Gratis Probestunde</a>
+              <a href="stundenplan.html" class="btn-ghost" data-i18n="cta_schedule">Stundenplan</a>
+            </div>
           </div>
+        </div>
+        <div class="hero-video">
+          <iframe
+            src="https://www.youtube.com/embed/0uxzt7-uwcY?autoplay=1&mute=1&loop=1&playlist=0uxzt7-uwcY&start=16&controls=0&rel=0&modestbranding=1&playsinline=1"
+            allow="autoplay; encrypted-media"
+            allowfullscreen
+            title="NDC Basel – World of Dance"
+          ></iframe>
         </div>
       </div>
       <div class="ticker-wrap">
@@ -79,7 +89,7 @@
               <span class="stat-label" data-i18n="stat_students">Schüler:innen</span>
             </div>
             <div class="stat-card">
-              <span class="stat-num">4</span>
+              <span class="stat-num">10+</span>
               <span class="stat-label" data-i18n="stat_teams">Show-Teams</span>
             </div>
             <div class="stat-card accent-card">
@@ -91,43 +101,49 @@
       </div>
     </section>
 
-    <!-- ── STYLES ──────────────────────────────────────────── -->
-    <section class="section styles-section reveal" id="styles">
+    <!-- ── HEUTE IM STUDIO ─────────────────────────────────── -->
+    <section class="section heute-section reveal" id="heute">
+      <div class="container" id="heuteContainer">
+        <!-- populated by main.js -->
+      </div>
+    </section>
+
+    <!-- ── WAS NDC AUSMACHT ──────────────────────────────────── -->
+    <section class="section pillars-section reveal" id="pillars">
       <div class="container">
         <div class="section-header">
-          <p class="eyebrow" data-i18n="styles_eyebrow">Was wir tanzen</p>
-          <h2 data-i18n="styles_heading">6 Styles. Unendlich viele Möglichkeiten.</h2>
+          <h2 class="pillars-heading">WAS NDC AUSMACHT</h2>
         </div>
-        <div class="styles-grid">
-          <div class="style-card">
-            <span class="style-num">01</span>
-            <h3>Hip Hop</h3>
-            <p>Die Wurzel aller urbanen Stile. Grooves, Cyphers und Battles.</p>
+        <div class="pillars-grid">
+          <div class="pillar-card">
+            <span class="pillar-num">01</span>
+            <h3 class="pillar-title">Vielfalt</h3>
+            <p class="pillar-desc">Hip Hop, Afro, Jazz, Fusion und viele weitere Einflüsse unter einem Dach.</p>
           </div>
-          <div class="style-card">
-            <span class="style-num">02</span>
-            <h3>Afro Dance</h3>
-            <p>Energie, Rhythmus und kultureller Ausdruck aus Afrika.</p>
+          <div class="pillar-card">
+            <span class="pillar-num">02</span>
+            <h3 class="pillar-title">Qualität</h3>
+            <p class="pillar-desc">Erfahrene Coaches begleiten dich auf deinem Weg.</p>
           </div>
-          <div class="style-card">
-            <span class="style-num">03</span>
-            <h3>House</h3>
-            <p>Flow, Footwork und die Seele des Tanzfloors.</p>
+          <div class="pillar-card">
+            <span class="pillar-num">03</span>
+            <h3 class="pillar-title">Gemeinschaft</h3>
+            <p class="pillar-desc">Ein Studio, das Menschen verbindet.</p>
           </div>
-          <div class="style-card">
-            <span class="style-num">04</span>
-            <h3>Commercial</h3>
-            <p>Charts, Castings und Showchoreografien für die grosse Bühne.</p>
+          <div class="pillar-card">
+            <span class="pillar-num">04</span>
+            <h3 class="pillar-title">Entwicklung</h3>
+            <p class="pillar-desc">Raum für Fortschritt, Kreativität und Selbstvertrauen.</p>
           </div>
-          <div class="style-card">
-            <span class="style-num">05</span>
-            <h3>Musical</h3>
-            <p>Geschichten durch Bewegung und Ausdruck erzählen.</p>
+          <div class="pillar-card">
+            <span class="pillar-num">05</span>
+            <h3 class="pillar-title">Bühne</h3>
+            <p class="pillar-desc">Shows, Projekte und Auftrittsmöglichkeiten.</p>
           </div>
-          <div class="style-card">
-            <span class="style-num">06</span>
-            <h3>Show-Training</h3>
-            <p>Wettkampf-Vorbereitung, Formations und Stage-Presence.</p>
+          <div class="pillar-card">
+            <span class="pillar-num">06</span>
+            <h3 class="pillar-title">Leidenschaft</h3>
+            <p class="pillar-desc">Weil Tanzen mehr ist als Schritte lernen.</p>
           </div>
         </div>
       </div>
@@ -163,13 +179,6 @@
         <div class="crews-cta">
           <a href="showgruppen.html" class="btn-primary" data-i18n="crews_cta">Alle Showgruppen ansehen</a>
         </div>
-      </div>
-    </section>
-
-    <!-- ── HEUTE IM STUDIO ─────────────────────────────────── -->
-    <section class="section heute-section reveal" id="heute">
-      <div class="container" id="heuteContainer">
-        <!-- populated by main.js -->
       </div>
     </section>
 

@@ -89,6 +89,4 @@ function renderKurse() {
 window.onLangChange = function() { renderKurse(); };
 
 renderKurse();
-// initPage() is called by stundenplan.js when loaded together on stundenplan.html
-// Only call it here if this is the only script on the page (legacy kurse.html)
-if (!document.getElementById('splanContainer')) initPage();
+initPage();

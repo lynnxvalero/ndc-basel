@@ -10,7 +10,7 @@ const NDC_I18N = {
   de: {
     // Nav
     nav_home:'Start', nav_kurse:'Kurse', nav_showgruppen:'Showgruppen',
-    nav_team:'Team', nav_stundenplan:'Kurse & Plan', nav_preise:'Preise',
+    nav_team:'Team', nav_stundenplan:'Stundenplan', nav_preise:'Preise',
     nav_news:'News', nav_kontakt:'Kontakt',
     cta_probestunde:'Gratis Probestunde',
     // Common
@@ -163,7 +163,7 @@ const NDC_I18N = {
   },
   en: {
     nav_home:'Home', nav_kurse:'Classes', nav_showgruppen:'Show Groups',
-    nav_team:'Team', nav_stundenplan:'Courses & Schedule', nav_preise:'Pricing',
+    nav_team:'Team', nav_stundenplan:'Schedule', nav_preise:'Pricing',
     nav_news:'News', nav_kontakt:'Contact',
     cta_probestunde:'Free Trial Class',
     today_badge:'Today', read_more:'Learn more →', back:'← Back',
@@ -393,7 +393,12 @@ function renderScheduleCard(entry) {
     <div class="heute-card ${entry.room}${entry.isShowgroup ? ' is-showgroup' : ''}" role="article">
       <div class="card-badges">${badges}</div>
       <div class="card-body">
-        <div class="teacher-avatar" aria-hidden="true">${getInitials(teachers.split(' & ')[0])}</div>
+        <div class="teacher-avatar" aria-hidden="true">${(() => {
+          const firstId = entry.teacherIds && entry.teacherIds[0];
+          const initials = getInitials(teachers.split(' & ')[0]);
+          if (!firstId) return initials;
+          return `<img src="images/teachers/${firstId}.jpg" alt="" onerror="this.parentElement.innerHTML='${initials}'">`;
+        })()}</div>
         <div class="card-info">
           <span class="card-time">${entry.start}–${entry.end}</span>
           <span class="card-name">${name}</span>
@@ -412,10 +417,9 @@ function buildHeader() {
   const page = window.location.pathname.split('/').pop() || 'index.html';
 
   const primary = [
-    ['nav_home','index.html'],
-    ['nav_stundenplan','stundenplan.html'],
+    ['nav_home','index.html'], ['nav_kurse','kurse.html'],
     ['nav_showgruppen','showgruppen.html'], ['nav_team','team.html'],
-    ['nav_preise','preise.html'],
+    ['nav_stundenplan','stundenplan.html'], ['nav_preise','preise.html'],
   ];
   const secondary = [['nav_news','news.html'], ['nav_kontakt','kontakt.html']];
 

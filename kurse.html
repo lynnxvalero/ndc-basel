@@ -1,8 +1,40 @@
 <!DOCTYPE html>
-<html><head><meta charset="UTF-8">
-<script>
-  const p = new URLSearchParams(window.location.search);
-  const lang = p.get('lang') || 'de';
-  window.location.replace('stundenplan.html?lang=' + lang + '#kurse');
-</script>
-</head><body></body></html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kurse | NDC Basel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+  <div id="header-root"></div>
+
+  <main>
+    <div class="page-hero">
+      <div class="container">
+        <p class="eyebrow" data-i18n="kurse_eyebrow">Kursangebot</p>
+        <h1 data-i18n="kurse_heading">Kurse & Stile.</h1>
+        <p class="page-hero-sub" data-i18n="kurse_sub">Nach Altersgruppe organisiert. Echte Zeiten, echte Coaches.</p>
+        <br>
+        <a href="stundenplan.html" class="btn-ghost" data-i18n="kurse_sched_link">Zum Stundenplan →</a>
+      </div>
+    </div>
+
+    <section class="section stundenplan-page reveal">
+      <div class="container" id="kurseContainer">
+        <!-- populated by kurse.js -->
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-root"></div>
+
+  <script src="scripts/data.js"></script>
+  <script src="scripts/shared.js"></script>
+  <script src="scripts/kurse.js"></script>
+</body>
+</html>

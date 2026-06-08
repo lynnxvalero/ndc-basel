@@ -9,11 +9,13 @@ function renderTeachersList() {
   const sorted = [...NDC.teachers].sort((a, b) => (b.featured ? 1 : 0) - (a.featured ? 1 : 0));
 
   grid.innerHTML = sorted.map(teacher => {
-    const initials = getInitials(teacher.name);
+    const initials  = getInitials(teacher.name);
     const styleTags = teacher.styles.map(s => `<span class="style-tag">${s}</span>`).join('');
+    const photoSrc  = `images/teachers/${teacher.id}.jpg`;
+    const photoEl   = `<img src="${photoSrc}" alt="${teacher.name}" onerror="this.parentElement.innerHTML='${initials}'">`;
     return `
       <a href="${withLang('teacher.html')}&id=${teacher.id}" class="teacher-card${teacher.featured ? ' featured' : ''}">
-        <div class="teacher-avatar-lg" aria-hidden="true">${initials}</div>
+        <div class="teacher-card-photo" aria-hidden="true">${photoEl}</div>
         <span class="teacher-name">${teacher.name}</span>
         <span class="teacher-role">${teacher.role[t.current]}</span>
         <div class="teacher-styles">${styleTags}</div>
@@ -39,6 +41,8 @@ function renderTeacherDetail() {
 
   const initials  = getInitials(teacher.name);
   const styleTags = teacher.styles.map(s => `<span class="style-tag">${s}</span>`).join('');
+  const photoSrc  = `images/teachers/${teacher.id}.jpg`;
+  const photoEl   = `<img src="${photoSrc}" alt="${teacher.name}" onerror="this.parentElement.innerHTML='${initials}'">`;
 
   main.innerHTML = `
     <div class="page-hero">
@@ -53,7 +57,7 @@ function renderTeacherDetail() {
       <div class="container">
         <div class="teacher-detail-grid">
           <div class="teacher-profile-card">
-            <div class="teacher-avatar-xl" aria-hidden="true">${initials}</div>
+            <div class="teacher-avatar-xl" aria-hidden="true">${photoEl}${initials}</div>
             <span class="teacher-profile-name">${teacher.name}</span>
             <span class="teacher-profile-role">${teacher.role[t.current]}</span>
             <div class="teacher-styles" style="justify-content:center">${styleTags}</div>
