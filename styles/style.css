@@ -1,12 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Hina+Mincho&display=swap');
-
-/* Rumonds — drop woff2/woff files into /fonts/ to activate */
-@font-face {
-  font-family: 'Rumonds';
-  src: url('../fonts/Rumonds.woff2') format('woff2'),
-       url('../fonts/Rumonds.woff') format('woff');
-  font-weight: 700; font-style: normal; font-display: swap;
-}
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Barlow+Condensed:ital,wght@0,700;0,900;1,700;1,900&display=swap');
 
 :root {
   /* ── Colours ──────────────────────────────────────────────── */
@@ -23,20 +15,21 @@
   --border-strong: rgba(255, 255, 255, 0.13);
 
   /* ── Typography ───────────────────────────────────────────── */
-  --font-display: 'Rumonds', 'Archivo Black', Impact, sans-serif;
-  --font-body:    'Helvetica Neue', Helvetica, Arial, sans-serif;
-  --font-serif:   'Hina Mincho', Georgia, 'Times New Roman', serif;
-  --font-accent:  'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-display: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+  --font-body:    'Barlow', system-ui, sans-serif;
 
   /* ── Type scale (fluid) ───────────────────────────────────── */
-  --text-xs:    clamp(0.65rem, 0.75vw, 0.72rem);
-  --text-sm:    clamp(0.8rem, 1vw, 0.875rem);
-  --text-base:  clamp(1rem, 1.2vw, 1.125rem);
-  --text-md:    clamp(1.125rem, 1.5vw, 1.375rem);
-  --text-lg:    clamp(1.5rem, 2.5vw, 2.25rem);
-  --text-xl:    clamp(2rem, 4vw, 4rem);
-  --text-2xl:   clamp(2.5rem, 5vw, 5.5rem);
-  --text-hero:  clamp(4.5rem, 9.5vw, 10.5rem);
+  --text-xs:     clamp(0.65rem, 1.2vw, 0.75rem);
+  --text-sm:     clamp(0.75rem, 1.4vw, 0.875rem);
+  --text-base:   clamp(0.875rem, 1.6vw, 1rem);
+  --text-md:     clamp(1rem, 2vw, 1.25rem);
+  --text-label:  clamp(0.65rem, 1.2vw, 0.8rem);
+  --text-lg:     clamp(1.5rem, 3vw, 2rem);
+  --text-xl:     clamp(2rem, 5vw, 3.5rem);
+  --text-2xl:    clamp(3rem, 8vw, 6rem);
+  --text-3xl:    clamp(4rem, 11vw, 9rem);
+  --text-hero:   clamp(5rem, 15vw, 14rem);
+  --text-bleed:  clamp(6rem, 20vw, 20rem);
 
   /* ── Spacing scale (fluid) ───────────────────────────────── */
   --space-xs:   clamp(0.25rem, 0.4vw, 0.4rem);
@@ -98,6 +91,20 @@ body {
 h1, h2, h3, h4, h5, h6 { text-wrap: balance; }
 p, li, figcaption        { text-wrap: pretty; }
 
+/* ── global type system ─────────────────────────────────────── */
+h1, h2, .display {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  line-height: 0.88;
+}
+.display--upright { font-style: normal; }
+h1 { font-size: var(--text-hero); }
+h2 { font-size: var(--text-3xl); }
+h3 { font-family: var(--font-display); font-size: var(--text-xl); font-weight: 700; font-style: normal; text-transform: uppercase; letter-spacing: -0.02em; }
+
 /* tabular nums for all data */
 .stat-num, .card-time, .pillar-num,
 .preise-price, .event-date { font-variant-numeric: tabular-nums; }
@@ -154,8 +161,9 @@ body::after {
 }
 
 .text-accent {
-  font-family: var(--font-accent);
-  font-weight: 800;
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-style: italic;
 }
 
 /* ── WORD-SPLIT REVEAL ──────────────────────────────────────── */
@@ -363,10 +371,11 @@ body::after {
 
 .eyebrow {
   display: inline-flex; align-items: center; gap: 0.8rem;
-  font-family: var(--font-body);
-  font-weight: 400;
-  font-size: var(--text-xs);
-  letter-spacing: 0.22em;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-style: normal;
+  font-size: var(--text-label);
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--accent);
   margin-bottom: var(--space-md);
@@ -394,8 +403,8 @@ body::after {
 
 .btn-primary {
   display: inline-flex; align-items: center; gap: 0.6rem;
-  font-family: var(--font-body); font-weight: 400;
-  font-size: var(--text-xs); letter-spacing: 0.18em; text-transform: uppercase;
+  font-family: var(--font-display); font-weight: 700; font-style: normal;
+  font-size: var(--text-label); letter-spacing: 0.1em; text-transform: uppercase;
   background: var(--accent); color: #080808;
   border: none; border-radius: 0;
   padding: 1.05rem 2.25rem; cursor: pointer; line-height: 1;
@@ -423,8 +432,8 @@ body::after {
 
 .btn-ghost {
   display: inline-flex; align-items: center; gap: 0.6rem;
-  font-family: var(--font-body); font-weight: 400;
-  font-size: var(--text-xs); letter-spacing: 0.18em; text-transform: uppercase;
+  font-family: var(--font-display); font-weight: 700; font-style: normal;
+  font-size: var(--text-label); letter-spacing: 0.1em; text-transform: uppercase;
   background: transparent; color: var(--text);
   border: 1px solid var(--border-strong); border-radius: 0;
   padding: 1.05rem 2.25rem; cursor: pointer; line-height: 1;
@@ -483,9 +492,9 @@ body::after {
 .hero-meta  { grid-area: meta; }
 
 .hero-eyebrow {
-  font-family: var(--font-body);
-  font-weight: 400;
-  font-size: var(--text-xs); letter-spacing: 0.22em; text-transform: uppercase;
+  font-family: var(--font-display);
+  font-weight: 700; font-style: normal;
+  font-size: var(--text-label); letter-spacing: 0.12em; text-transform: uppercase;
   color: var(--accent); margin-bottom: var(--space-lg);
   display: inline-flex; align-items: center; gap: 0.8rem;
   animation: heroIn 0.8s var(--spring) 80ms both;
@@ -506,8 +515,9 @@ body::after {
 .title-line {
   display: block;
   font-family: var(--font-display);
+  font-weight: 900; font-style: italic;
   font-size: var(--text-hero);
-  line-height: 0.85; letter-spacing: -0.04em; text-transform: uppercase;
+  line-height: 0.88; letter-spacing: -0.02em; text-transform: uppercase;
 }
 
 .title-line.solid { color: var(--text); }
@@ -726,12 +736,11 @@ body::after {
 
 .pillar-num {
   display: block;
-  font-family: var(--font-serif);
-  font-size: 1rem; font-weight: 400;
-  letter-spacing: 0.05em;
+  font-family: var(--font-display);
+  font-size: var(--text-label); font-weight: 700; font-style: normal;
+  letter-spacing: 0.12em;
   color: var(--accent);
   margin-bottom: var(--space-lg);
-  opacity: 0.8;
 }
 
 .pillar-title {
