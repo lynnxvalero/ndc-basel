@@ -638,6 +638,7 @@ body::after {
 
 .stat-num {
   font-family: var(--font-display);
+  font-weight: 900; font-style: italic;
   font-size: clamp(2.75rem, 4.5vw, 5rem); line-height: 1;
   color: var(--highlight);
   text-shadow: 0 0 24px rgba(194,255,77,0.28), 0 0 48px rgba(194,255,77,0.1);
@@ -647,8 +648,8 @@ body::after {
 .stat-num.counting { animation: numPop 0.65s var(--bounce) forwards; }
 
 .stat-label {
-  font-family: var(--font-body); font-weight: 400;
-  font-size: var(--text-xs); letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted);
+  font-family: var(--font-display); font-weight: 700; font-style: italic;
+  font-size: var(--text-xs); letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted);
   margin-top: 0.25rem;
 }
 
