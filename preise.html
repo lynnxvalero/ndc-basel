@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preise | NDC Basel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+  <div id="header-root"></div>
+
+  <main>
+    <div class="page-hero">
+      <div class="container">
+        <p class="eyebrow" data-i18n="preise_eyebrow">Preise & Abos</p>
+        <h1 data-i18n="preise_heading">Einfach. Flexibel. Fair.</h1>
+      </div>
+    </div>
+
+    <!-- ── PRICING GRID ──────────────────────────────────── -->
+    <section class="section preise-section reveal">
+      <div class="container">
+        <div class="preise-grid" id="preiseGrid">
+          <!-- populated by preise.js -->
+        </div>
+        <div class="preise-footer">
+          <p class="preise-note" data-i18n="preise_note">Keine Jahresverträge · Monatlich kündbar · Probestunde kostenlos</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── POLICY NOTES ───────────────────────────────────── -->
+    <section class="section about-section reveal">
+      <div class="container">
+        <div class="about-grid">
+          <div>
+            <div class="about-block">
+              <h3 data-i18n="preise_policy_heading">Alle Abos</h3>
+              <ul class="achievement-list" id="policyList">
+                <!-- populated by preise.js -->
+              </ul>
+            </div>
+            <div class="about-block">
+              <h3 data-i18n="preise_faq_heading">Häufige Fragen</h3>
+              <div id="faqList">
+                <!-- populated by preise.js -->
+              </div>
+            </div>
+          </div>
+          <!-- ── TRIAL BOOKING FORM ───────────────────────── -->
+          <div id="probestunde">
+            <p class="eyebrow" data-i18n="preise_book_heading">Gratis Probestunde buchen</p>
+            <p style="color:var(--muted);font-size:0.9rem;margin-bottom:1.5rem" data-i18n="preise_book_sub">Melde dich an – wir melden uns innerhalb von 24 Stunden.</p>
+            <form class="contact-form" id="probeForm" novalidate>
+              <div class="form-group">
+                <label for="probeName" data-i18n="form_name">Name</label>
+                <input type="text" id="probeName" name="name" required
+                       data-i18n-placeholder="form_name_ph" placeholder="Dein Name">
+              </div>
+              <div class="form-group">
+                <label for="probeEmail" data-i18n="form_email">E-Mail</label>
+                <input type="email" id="probeEmail" name="email" required
+                       data-i18n-placeholder="form_email_ph" placeholder="name@beispiel.ch">
+              </div>
+              <div class="form-group">
+                <label for="probeInterest" data-i18n="form_interest">Ich interessiere mich für</label>
+                <input type="text" id="probeInterest" name="interest"
+                       data-i18n-placeholder="form_interest_ph"
+                       placeholder="z.B. Teenie Hip Hop, Commercial, Probestunde …">
+              </div>
+              <button type="submit" class="btn-primary" data-i18n="form_submit_probe">Probestunde anfragen</button>
+              <p class="form-status" id="probeStatus"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-root"></div>
+
+  <script src="scripts/data.js"></script>
+  <script src="scripts/shared.js"></script>
+  <script src="scripts/preise.js"></script>
+</body>
+</html>

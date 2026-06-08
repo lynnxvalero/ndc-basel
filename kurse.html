@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<script>
+  const p = new URLSearchParams(window.location.search);
+  const lang = p.get('lang') || 'de';
+  window.location.replace('stundenplan.html?lang=' + lang + '#kurse');
+</script>
+</head><body></body></html>

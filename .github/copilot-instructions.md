@@ -1,0 +1,4 @@
+- [ ] Scaffold a static website project in the current workspace.
+- [ ] Include HTML, CSS, and JavaScript files for a business website homepage.
+- [ ] Provide a README with usage instructions.
+- [ ] Keep the project structure simple and easy to customize.

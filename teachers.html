@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lehrer:innen | NDC Basel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand">NDC<span>Basel</span></a>
+      <nav class="site-nav" id="siteNav">
+        <a href="index.html"         data-i18n="nav_home">Start</a>
+        <a href="ueber-uns.html"     data-i18n="nav_about">Über uns</a>
+        <a href="crews.html"         data-i18n="nav_crews">Crews</a>
+        <a href="teachers.html"      data-i18n="nav_teachers">Lehrer:innen</a>
+        <a href="stundenplan.html"   data-i18n="nav_stundenplan">Stundenplan</a>
+        <a href="index.html#contact" data-i18n="nav_contact">Kontakt</a>
+      </nav>
+      <div class="header-actions">
+        <button class="lang-btn" id="langToggle" aria-label="Switch language">EN</button>
+        <button class="nav-toggle" id="navToggle" aria-label="Navigation öffnen">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-hero">
+      <div class="container">
+        <p class="eyebrow" data-i18n="teachers_page_eyebrow">Das Team</p>
+        <h1 data-i18n="teachers_page_heading">Unsere Coaches.</h1>
+        <p class="page-hero-sub" data-i18n="teachers_page_sub">Leidenschaftliche Tänzer:innen und Pädagog:innen, die ihr Wissen täglich weitergeben.</p>
+      </div>
+    </div>
+
+    <section class="section teachers-page reveal">
+      <div class="container">
+        <div class="teachers-grid" id="teachersGrid">
+          <!-- populated by JS -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a href="index.html" class="brand">NDC<span>Basel</span></a>
+      <p data-i18n="footer_text">© 2026 New Dance Center Basel · Zwingerstrasse 12 · 4053 Basel</p>
+    </div>
+  </footer>
+
+  <script src="scripts/data.js"></script>
+  <script src="scripts/shared.js"></script>
+  <script src="scripts/teachers.js"></script>
+</body>
+</html>

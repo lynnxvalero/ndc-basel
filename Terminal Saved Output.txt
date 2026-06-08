@@ -1,0 +1,24 @@
+Last login: Fri Feb 27 09:47:00 on console
+lindsay@Lindsays-Laptop ~ % 
+lindsay@Lindsays-Laptop ~ % npx skills add emilkowalski/skill
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

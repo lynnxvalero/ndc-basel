@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Über uns | NDC Basel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand">NDC<span>Basel</span></a>
+      <nav class="site-nav" id="siteNav">
+        <a href="index.html"        data-i18n="nav_home">Start</a>
+        <a href="ueber-uns.html"    data-i18n="nav_about">Über uns</a>
+        <a href="crews.html"        data-i18n="nav_crews">Crews</a>
+        <a href="teachers.html"     data-i18n="nav_teachers">Lehrer:innen</a>
+        <a href="stundenplan.html"  data-i18n="nav_stundenplan">Stundenplan</a>
+        <a href="index.html#contact" data-i18n="nav_contact">Kontakt</a>
+      </nav>
+      <div class="header-actions">
+        <button class="lang-btn" id="langToggle" aria-label="Switch language">EN</button>
+        <button class="nav-toggle" id="navToggle" aria-label="Navigation öffnen">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-hero">
+      <div class="container">
+        <p class="eyebrow" data-i18n="about_eyebrow">Über uns</p>
+        <h1 data-i18n="about_heading">Das NDC Basel.</h1>
+        <p class="page-hero-sub" data-i18n="about_history_text">Das New Dance Center Basel wurde von Jasmin Weder Wessels gegründet und ist seit über 25 Jahren ein fester Bestandteil der Basler Tanzszene.</p>
+      </div>
+    </div>
+
+    <section class="section about-section reveal">
+      <div class="container">
+        <div class="about-grid">
+          <div>
+            <div class="about-block">
+              <h3 data-i18n="about_history_title">Geschichte</h3>
+              <p data-i18n="about_history_text">Das New Dance Center Basel wurde von Jasmin Weder Wessels gegründet und ist seit über 25 Jahren ein fester Bestandteil der Basler Tanzszene. Was als kleines Studio begann, ist heute eine lebendige Community mit Hunderten von Schüler:innen, mehreren Showgruppen und einem Team leidenschaftlicher Coaches.</p>
+            </div>
+            <div class="about-block">
+              <h3 data-i18n="about_philosophy_title">Philosophie</h3>
+              <p data-i18n="about_philosophy_text">Bei NDC Basel steht die Community im Mittelpunkt. Wir glauben, dass Tanzen für alle zugänglich sein sollte – deshalb bieten wir flexible Kurse ohne Jahresvertrag an. Verpasste Stunden können nachgeholt werden, und jede:r darf vor der Anmeldung kostenlos reinschnuppern.</p>
+            </div>
+            <div class="about-values">
+              <div class="value-card">
+                <h4>Community</h4>
+                <p>Eine offene, inklusive Familie aus Tänzer:innen aller Altersgruppen und Hintergründe.</p>
+              </div>
+              <div class="value-card">
+                <h4>Flexibilität</h4>
+                <p>Monatlich kündbar. Verpasste Stunden nachholen. Probestunde kostenlos.</p>
+              </div>
+              <div class="value-card">
+                <h4>Entwicklung</h4>
+                <p>Persönliches Coaching auf jedem Level – vom Mini-Kid bis zum Showgruppen-Mitglied.</p>
+              </div>
+              <div class="value-card">
+                <h4>Leidenschaft</h4>
+                <p>25 Jahre urbane Tanzkultur – und die Begeisterung wächst jeden Tag weiter.</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="about-block">
+              <h3 data-i18n="about_location_title">Standort</h3>
+              <p data-i18n="about_location_text">Unsere zwei professionellen Trainingsräume befinden sich an der Zwingerstrasse 12 in 4053 Basel. Der Raum Blau und der Raum Grün bieten optimale Voraussetzungen für alle Stile und Gruppen.</p>
+              <br>
+              <div class="about-address-card">
+                <p><strong>New Dance Center Basel</strong></p>
+                <p>Zwingerstrasse 12</p>
+                <p>4053 Basel</p>
+                <br>
+                <p>Tel: <a href="tel:+41793207688">+41 79 320 76 88</a></p>
+                <p>E-Mail: <a href="mailto:jasminweder@magnet.ch">jasminweder@magnet.ch</a></p>
+              </div>
+            </div>
+            <div class="about-block">
+              <h3 data-i18n="about_team_title">Das Team</h3>
+              <p data-i18n="about_team_text">Unser Coach-Team besteht aus erfahrenen Tänzer:innen und Pädagog:innen, die ihre Leidenschaft täglich weitergeben.</p>
+              <br>
+              <a href="teachers.html" class="btn-primary" data-i18n="about_team_link">Alle Lehrer:innen →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a href="index.html" class="brand">NDC<span>Basel</span></a>
+      <p data-i18n="footer_text">© 2026 New Dance Center Basel · Zwingerstrasse 12 · 4053 Basel</p>
+    </div>
+  </footer>
+
+  <script src="scripts/data.js"></script>
+  <script src="scripts/shared.js"></script>
+  <script>initPage();</script>
+</body>
+</html>

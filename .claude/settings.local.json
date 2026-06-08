@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "Skill(run)",
+      "Skill(run:*)"
+    ]
+  }
+}
