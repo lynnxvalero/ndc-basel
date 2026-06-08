@@ -416,21 +416,19 @@ function buildHeader() {
   const lang = getLang();
   const page = window.location.pathname.split('/').pop() || 'index.html';
 
-  const primary = [
-    ['nav_home','index.html'], ['nav_kurse','kurse.html'],
-    ['nav_showgruppen','showgruppen.html'], ['nav_team','team.html'],
-    ['nav_stundenplan','stundenplan.html'], ['nav_preise','preise.html'],
+  const links = [
+    ['nav_home',        'index.html'],
+    ['nav_showgruppen', 'showgruppen.html'],
+    ['nav_team',        'team.html'],
+    ['nav_stundenplan', 'stundenplan.html'],
+    ['nav_preise',      'preise.html'],
+    ['nav_news',        'news.html'],
+    ['nav_kontakt',     'kontakt.html'],
   ];
-  const secondary = [['nav_news','news.html'], ['nav_kontakt','kontakt.html']];
 
-  const pLinks = primary.map(([key, href]) => {
-    const active = page === href;
-    return `<a href="${withLang(href)}"${active ? ' class="active" aria-current="page"' : ''}>${t(key)}</a>`;
-  }).join('');
-
-  const sLinks = secondary.map(([key, href]) => {
-    const active = page === href;
-    return `<a href="${withLang(href)}" class="nav-sec${active ? ' active' : ''}"${active ? ' aria-current="page"' : ''}>${t(key)}</a>`;
+  const navLinks = links.map(([key, href], i) => {
+    const active = page === href || (page === '' && href === 'index.html');
+    return `<a href="${withLang(href)}" style="--i:${i}"${active ? ' class="active" aria-current="page"' : ''}>${t(key)}</a>`;
   }).join('');
 
   return `
@@ -439,27 +437,30 @@ function buildHeader() {
       <a href="${withLang('index.html')}" class="brand" aria-label="NDC Basel">
         <img src="logos/NDC_LOGO_ENDVERSION_WEISS.png" alt="NDC Basel" class="brand-logo">
       </a>
-      <nav class="site-nav" id="siteNav" aria-label="Hauptnavigation">
-        ${pLinks}
-        <div class="nav-sec-group" aria-hidden="true">${sLinks}</div>
-      </nav>
-      <div class="header-actions">
-        <a href="${withLang('preise.html')}#probestunde" class="btn-cta">${t('cta_probestunde')}</a>
-        <button class="lang-btn" id="langToggle" aria-label="Switch language">${lang === 'de' ? 'EN' : 'DE'}</button>
-        <button class="nav-toggle" id="navToggle"
-          aria-label="${lang === 'de' ? 'Navigation öffnen' : 'Open navigation'}"
-          aria-expanded="false" aria-controls="siteNav">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
+      <button class="burger" id="burgerBtn"
+        aria-label="${lang === 'de' ? 'Menü öffnen' : 'Open menu'}"
+        aria-expanded="false" aria-controls="menuOverlay">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-  </header>`;
+  </header>
+
+  <div class="menu-overlay" id="menuOverlay" aria-hidden="true">
+    <nav class="menu-nav" aria-label="Hauptnavigation">
+      ${navLinks}
+    </nav>
+    <div class="menu-footer">
+      <button class="lang-btn" id="langToggle" aria-label="Switch language">
+        ${lang === 'de' ? 'EN' : 'DE'}
+      </button>
+    </div>
+  </div>`;
 }
 
 // ── FOOTER ────────────────────────────────────────────────────
 function buildFooter() {
   const fLinks = [
-    ['nav_kurse','kurse.html'], ['nav_showgruppen','showgruppen.html'],
+    ['nav_showgruppen','showgruppen.html'],
     ['nav_stundenplan','stundenplan.html'], ['nav_preise','preise.html'],
     ['nav_news','news.html'], ['nav_kontakt','kontakt.html'],
   ].map(([key, href]) => `<a href="${withLang(href)}">${t(key)}</a>`).join('');
@@ -515,29 +516,43 @@ function initShared() {
 
   applyTranslations();
 
-  // Mobile nav
-  const toggle = document.getElementById('navToggle');
-  const nav    = document.getElementById('siteNav');
-  if (toggle && nav) {
-    toggle.addEventListener('click', () => {
-      const open = nav.classList.toggle('open');
-      toggle.classList.toggle('open', open);
-      toggle.setAttribute('aria-expanded', String(open));
-      document.body.style.overflow = open ? 'hidden' : '';
+  // Fullscreen burger menu
+  const burger  = document.getElementById('burgerBtn');
+  const overlay = document.getElementById('menuOverlay');
+
+  function openMenu() {
+    overlay.classList.add('open');
+    burger.classList.add('open');
+    burger.setAttribute('aria-expanded', 'true');
+    overlay.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMenu() {
+    overlay.classList.remove('open');
+    burger.classList.remove('open');
+    burger.setAttribute('aria-expanded', 'false');
+    overlay.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  if (burger && overlay) {
+    burger.addEventListener('click', () => {
+      overlay.classList.contains('open') ? closeMenu() : openMenu();
     });
-    nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-      nav.classList.remove('open');
-      toggle.classList.remove('open');
-      toggle.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
-      const hash = (a.getAttribute('href') || '').split('#')[1];
-      if (hash) setTimeout(() => document.getElementById(hash)?.classList.add('visible'), 50);
-    }));
+
+    overlay.querySelectorAll('.menu-nav a').forEach(a => {
+      a.addEventListener('click', () => {
+        closeMenu();
+        const hash = (a.getAttribute('href') || '').split('#')[1];
+        if (hash) setTimeout(() => document.getElementById(hash)?.classList.add('visible'), 50);
+      });
+    });
+
     document.addEventListener('keydown', e => {
-      if (e.key === 'Escape' && nav.classList.contains('open')) {
-        nav.classList.remove('open'); toggle.classList.remove('open');
-        toggle.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = ''; toggle.focus();
+      if (e.key === 'Escape' && overlay.classList.contains('open')) {
+        closeMenu();
+        burger.focus();
       }
     });
   }
