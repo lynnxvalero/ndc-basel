@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Barlow+Condensed:ital,wght@0,700;0,900;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,900;1,700;1,900&family=Syne:wght@500;700&display=swap');
 
 :root {
   /* ── Colours ──────────────────────────────────────────────── */
-  --bg:            #080808;
+  --bg:            #000000;
   --surface:       #101010;
   --surface-2:     #161616;
   --accent:        #0BC8F0;
@@ -16,7 +16,8 @@
 
   /* ── Typography ───────────────────────────────────────────── */
   --font-display: 'Barlow Condensed', 'Arial Narrow', sans-serif;
-  --font-body:    'Barlow', system-ui, sans-serif;
+  --font-heading: 'Syne', system-ui, sans-serif;
+  --font-body:    'Helvetica Neue', Helvetica, Arial, sans-serif;
 
   /* ── Type scale (fluid) ───────────────────────────────────── */
   --text-xs:     clamp(0.65rem, 1.2vw, 0.75rem);
@@ -92,7 +93,7 @@ h1, h2, h3, h4, h5, h6 { text-wrap: balance; }
 p, li, figcaption        { text-wrap: pretty; }
 
 /* ── global type system ─────────────────────────────────────── */
-h1, h2, .display {
+h1, .display {
   font-family: var(--font-display);
   font-weight: 900;
   font-style: italic;
@@ -100,10 +101,17 @@ h1, h2, .display {
   text-transform: uppercase;
   line-height: 0.88;
 }
+h2 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  line-height: 0.92;
+  font-size: var(--text-3xl);
+}
+h3 { font-family: var(--font-heading); font-size: var(--text-xl); font-weight: 500; font-style: normal; text-transform: uppercase; letter-spacing: -0.01em; }
 .display--upright { font-style: normal; }
-h1 { font-size: var(--text-hero); }
-h2 { font-size: var(--text-3xl); }
-h3 { font-family: var(--font-display); font-size: var(--text-xl); font-weight: 700; font-style: normal; text-transform: uppercase; letter-spacing: -0.02em; }
 
 /* tabular nums for all data */
 .stat-num, .card-time, .pillar-num,
@@ -371,8 +379,8 @@ body::after {
 
 .eyebrow {
   display: inline-flex; align-items: center; gap: 0.8rem;
-  font-family: var(--font-display);
-  font-weight: 700;
+  font-family: var(--font-heading);
+  font-weight: 500;
   font-style: normal;
   font-size: var(--text-label);
   letter-spacing: 0.12em;
@@ -492,8 +500,8 @@ body::after {
 .hero-meta  { grid-area: meta; }
 
 .hero-eyebrow {
-  font-family: var(--font-display);
-  font-weight: 700; font-style: normal;
+  font-family: var(--font-heading);
+  font-weight: 500; font-style: normal;
   font-size: var(--text-label); letter-spacing: 0.12em; text-transform: uppercase;
   color: var(--accent); margin-bottom: var(--space-lg);
   display: inline-flex; align-items: center; gap: 0.8rem;
@@ -591,12 +599,12 @@ body::after {
 }
 
 .ticker-track span {
-  font-family: var(--font-body);
-  font-weight: 400;
-  font-size: var(--text-xs); letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: var(--text-xs); letter-spacing: 0.18em; text-transform: uppercase; color: var(--highlight);
 }
 
-.ticker-track .dot { color: var(--border-strong); font-size: 0.5rem; }
+.ticker-track .dot { color: rgba(194,255,77,0.4); font-size: 0.5rem; }
 
 @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 

@@ -27,7 +27,7 @@ const NDC_I18N = {
     // Index hero
     hero_since:'Basel · Seit 2001',
     hero_tagline:'Hip Hop · Afro · House · Commercial · Show',
-    hero_desc:'Über 25 Jahre Leidenschaft für urbanen Tanz in Basel. Flexible Kurse, echte Community, kein Jahresvertrag.',
+    hero_desc:'Dein Hub für Urban Dance Styles, Foundations und High Performance Crews im Herzen der Stadt. Von Kindern bis Erwachsenen, von Einsteigern bis Showgruppen. Unsere Coaches begleiten dich persönlich auf deinem Weg.',
     cta_trial:'Gratis Probestunde', cta_sched:'Stundenplan',
     // Stats
     stat_years:'Jahre Erfahrung', stat_students:'Schüler:innen',
@@ -139,7 +139,7 @@ const NDC_I18N = {
     event_type_workshop:'Workshop',
     event_type_popup:'Pop-up',
     // Index page static keys
-    title_1:'NEW', title_2:'DANCE', title_3:'CENTER',
+    title_1:'MEHR ALS', title_2:'EIN', title_3:'STUDIO.',
     cta_schedule:'Stundenplan',
     studio_eyebrow:'Das Studio',
     styles_eyebrow:'Was wir tanzen',
@@ -178,7 +178,7 @@ const NDC_I18N = {
     footer_text:'© 2026 New Dance Center Basel',
     hero_since:'Basel · Since 2001',
     hero_tagline:'Hip Hop · Afro · House · Commercial · Show',
-    hero_desc:'Over 25 years of passion for urban dance in Basel. Flexible classes, real community, no annual contract.',
+    hero_desc:'Your hub for Urban Dance Styles, Foundations and High Performance Crews in the heart of the city. From children to adults, from beginners to show groups. Our coaches guide you personally on your journey.',
     cta_trial:'Free Trial Class', cta_sched:'Schedule',
     stat_years:'Years experience', stat_students:'Students',
     stat_teams:'Show teams', stat_flex:'Flexible',
@@ -276,7 +276,7 @@ const NDC_I18N = {
     event_type_workshop:'Workshop',
     event_type_popup:'Pop-up',
     // Index page static keys
-    title_1:'NEW', title_2:'DANCE', title_3:'CENTER',
+    title_1:'MEHR ALS', title_2:'EIN', title_3:'STUDIO.',
     cta_schedule:'Schedule',
     studio_eyebrow:'The Studio',
     styles_eyebrow:'What we dance',
