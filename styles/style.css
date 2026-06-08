@@ -3,8 +3,8 @@
 :root {
   /* ── Colours ──────────────────────────────────────────────── */
   --bg:            #000000;
-  --surface:       #101010;
-  --surface-2:     #161616;
+  --surface:       #000000;
+  --surface-2:     #050505;
   --accent:        #0BC8F0;
   --accent-dim:    rgba(11, 200, 240, 0.07);
   --accent-glow:   rgba(11, 200, 240, 0.22);
@@ -526,13 +526,7 @@ body::after {
   font-weight: 900; font-style: italic;
   font-size: clamp(2.8rem, 7vw, 7.5rem);
   line-height: 0.88; letter-spacing: -0.02em; text-transform: uppercase;
-}
-
-.title-line.solid { color: var(--text); }
-
-.title-line.stroke {
-  color: transparent;
-  -webkit-text-stroke: 2px var(--accent);
+  color: #ffffff;
 }
 
 /* Hero title — staggered line-up entrance */
