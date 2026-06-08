@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Figtree:wght@400;500;600;700&family=Syne:wght@400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap');
 
 :root {
   --bg:            #0a0a0a;
@@ -11,8 +11,8 @@
   --text:          #f0f0f0;
   --muted:         #999999;
   --border:        rgba(255, 255, 255, 0.1);
-  --font-display: 'Archivo Black', Impact, sans-serif;
-  --font-body:    'Figtree', system-ui, -apple-system, sans-serif;
+  --font-display: 'Syne', system-ui, sans-serif;
+  --font-body:    'Syne', system-ui, sans-serif;
   --font-accent:  'Syne', system-ui, sans-serif;
   /* room colours */
   --room-blau:   #60A5FA;
@@ -200,7 +200,7 @@ body::after {
 .brand:hover { opacity: 0.8; }
 
 .brand-logo {
-  height: 38px;
+  height: 48px;
   width: auto;
   display: block;
 }
@@ -266,7 +266,7 @@ body::after {
 }
 
 .menu-nav a {
-  font-family: var(--font-display);
+  font-family: var(--font-display); font-weight: 800;
   font-size: clamp(2.8rem, 7vw, 7rem);
   line-height: 1.05;
   letter-spacing: -0.02em;
@@ -337,7 +337,7 @@ body::after {
 .section-sub { color: var(--muted); font-size: 0.95rem; margin-top: 0.75rem; }
 
 .section-header h2 {
-  font-family: var(--font-display);
+  font-family: var(--font-display); font-weight: 800;
   font-size: clamp(2.5rem, 5vw, 5rem);
   line-height: 0.9;
   letter-spacing: -0.02em;
@@ -450,7 +450,7 @@ body::after {
 
 .title-line {
   display: block;
-  font-family: var(--font-display);
+  font-family: var(--font-display); font-weight: 800;
   font-size: clamp(3.5rem, 7vw, 8rem);
   line-height: 0.88; letter-spacing: -0.02em; text-transform: uppercase;
 }
@@ -503,7 +503,7 @@ body::after {
   display: flex; align-items: center; justify-content: center;
   background: var(--surface);
   color: var(--muted);
-  font-family: var(--font-display);
+  font-family: var(--font-display); font-weight: 800;
   font-size: 1.5rem; letter-spacing: 0.3em;
 }
 
@@ -525,7 +525,7 @@ body::after {
 }
 
 .ticker-track span {
-  font-family: var(--font-display);
+  font-family: var(--font-display); font-weight: 800;
   font-size: 1rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text);
 }
 
@@ -540,7 +540,7 @@ body::after {
 .studio-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
 
 .studio-copy h2 {
-  font-family: var(--font-display);
+  font-family: var(--font-display); font-weight: 800;
   font-size: clamp(2.5rem, 4vw, 4.5rem);
   line-height: 0.9; letter-spacing: -0.02em; text-transform: uppercase;
   margin-bottom: 1.5rem;
@@ -568,7 +568,7 @@ body::after {
 .accent-card { background: rgba(11,200,240,0.06); border-color: rgba(11,200,240,0.15); }
 
 .stat-num {
-  font-family: var(--font-display);
+  font-family: var(--font-display); font-weight: 800;
   font-size: clamp(3rem, 4.5vw, 4.5rem); line-height: 1;
   color: var(--highlight);
   text-shadow: 0 0 30px rgba(194,255,77,0.35), 0 0 60px rgba(194,255,77,0.15);
@@ -611,13 +611,13 @@ body::after {
 .style-card:hover::after { transform: scaleX(1); }
 
 .style-num {
-  display: block; font-family: var(--font-display);
+  display: block; font-family: var(--font-display); font-weight: 800;
   font-size: 4.5rem; line-height: 1;
   color: rgba(255,255,255,0.05); margin-bottom: 0.75rem;
 }
 
 .style-card h3 {
-  font-family: var(--font-display);
+  font-family: var(--font-display); font-weight: 800;
   font-size: 1.6rem; letter-spacing: -0.01em;
   text-transform: uppercase; color: var(--text); margin-bottom: 0.75rem;
 }
@@ -629,7 +629,7 @@ body::after {
 .pillars-section { background: var(--surface); }
 
 .pillars-heading {
-  font-family: var(--font-display);
+  font-family: var(--font-display); font-weight: 800;
   font-size: clamp(2.5rem, 5vw, 5rem);
   line-height: 0.9;
   letter-spacing: -0.02em;
@@ -683,7 +683,7 @@ body::after {
 }
 
 .pillar-title {
-  font-family: var(--font-display);
+  font-family: var(--font-display); font-weight: 800;
   font-size: 1.5rem; letter-spacing: -0.01em;
   text-transform: uppercase; color: var(--text);
   margin-bottom: 0.75rem;
@@ -725,7 +725,7 @@ body::after {
 }
 
 .crew-card h3 {
-  font-family: var(--font-display);
+  font-family: var(--font-display); font-weight: 800;
   font-size: clamp(2rem, 2.5vw, 2.75rem);
   letter-spacing: -0.02em; text-transform: uppercase;
   color: var(--text); margin-bottom: 1rem; line-height: 0.95;
@@ -742,13 +742,13 @@ body::after {
 .heute-header { margin-bottom: 3rem; }
 
 .heute-header h2 {
-  font-family: var(--font-display);
+  font-family: var(--font-display); font-weight: 800;
   font-size: clamp(2.5rem, 5vw, 5rem);
   line-height: 0.9; letter-spacing: -0.02em; text-transform: uppercase; margin-bottom: 0.5rem;
 }
 
 .heute-day-name {
-  font-family: var(--font-display);
+  font-family: var(--font-display); font-weight: 800;
   font-size: clamp(1.25rem, 2.5vw, 2rem);
   letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted);
 }
@@ -756,7 +756,7 @@ body::after {
 .heute-empty { padding: 4rem 0; text-align: center; }
 
 .heute-empty-title {
-  font-family: var(--font-display); font-size: 2rem;
+  font-family: var(--font-display); font-weight: 800; font-size: 2rem;
   text-transform: uppercase; color: var(--muted); margin-bottom: 0.5rem;
 }
 
@@ -813,7 +813,7 @@ body::after {
   flex-shrink: 0; width: 72px; height: 72px; border-radius: 50%;
   background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
   display: flex; align-items: center; justify-content: center;
-  font-family: var(--font-display); font-size: 1rem; color: var(--muted);
+  font-family: var(--font-display); font-weight: 800; font-size: 1rem; color: var(--muted);
   overflow: hidden;
 }
 .teacher-avatar img {
@@ -829,7 +829,7 @@ body::after {
 }
 
 .card-name {
-  font-family: var(--font-display);
+  font-family: var(--font-display); font-weight: 800;
   font-size: 1.15rem; letter-spacing: -0.01em;
   text-transform: uppercase; color: var(--text); line-height: 1.1;
 }
@@ -890,7 +890,7 @@ body::after {
 }
 
 .preis-label {
-  font-family: var(--font-display);
+  font-family: var(--font-display); font-weight: 800;
   font-size: 1.5rem; text-transform: uppercase; color: var(--text); line-height: 1;
 }
 
@@ -903,7 +903,7 @@ body::after {
 .preis-option { display: block; }
 
 .preis-chf {
-  font-family: var(--font-display);
+  font-family: var(--font-display); font-weight: 800;
   font-size: 2.25rem; line-height: 1; color: var(--accent);
 }
 
@@ -977,7 +977,7 @@ body::after {
 .news-date { font-size: 0.78rem; color: var(--muted); }
 
 .news-title {
-  font-family: var(--font-display);
+  font-family: var(--font-display); font-weight: 800;
   font-size: 1.4rem; line-height: 1.1;
   text-transform: uppercase; color: var(--text);
 }
@@ -1046,7 +1046,7 @@ body::after {
 .contact-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 5rem; align-items: start; }
 
 .contact-info h2 {
-  font-family: var(--font-display);
+  font-family: var(--font-display); font-weight: 800;
   font-size: clamp(3rem, 5vw, 6rem); line-height: 0.87;
   letter-spacing: -0.03em; text-transform: uppercase; margin-bottom: 2.5rem;
 }
@@ -1156,7 +1156,7 @@ body::after {
 .page-hero .container { position: relative; z-index: 1; }
 
 .page-hero h1 {
-  font-family: var(--font-display);
+  font-family: var(--font-display); font-weight: 800;
   font-size: clamp(3.5rem, 9vw, 9rem);
   line-height: 0.88; letter-spacing: -0.03em; text-transform: uppercase;
   margin-bottom: 1rem;
@@ -1183,7 +1183,7 @@ body::after {
 .about-block { margin-bottom: 3rem; }
 
 .about-block h3 {
-  font-family: var(--font-display);
+  font-family: var(--font-display); font-weight: 800;
   font-size: clamp(1.5rem, 2.5vw, 2.5rem);
   text-transform: uppercase; letter-spacing: -0.01em;
   margin-bottom: 1rem; color: var(--text);
@@ -1206,7 +1206,7 @@ body::after {
 }
 
 .value-card h4 {
-  font-family: var(--font-display); font-size: 1.1rem;
+  font-family: var(--font-display); font-weight: 800; font-size: 1.1rem;
   text-transform: uppercase; margin-bottom: 0.5rem; color: var(--text);
 }
 
@@ -1238,7 +1238,7 @@ body::after {
 .crew-full-card:active { transform: scale(0.98); transition-duration: var(--dur-fast); }
 
 .crew-full-card h3 {
-  font-family: var(--font-display);
+  font-family: var(--font-display); font-weight: 800;
   font-size: clamp(1.75rem, 2.5vw, 2.5rem);
   text-transform: uppercase; letter-spacing: -0.02em;
   color: var(--text); margin-bottom: 0.75rem; line-height: 1;
@@ -1272,7 +1272,7 @@ body::after {
 .crew-detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
 
 .crew-detail-copy h2 {
-  font-family: var(--font-display);
+  font-family: var(--font-display); font-weight: 800;
   font-size: clamp(2rem, 4vw, 4rem);
   text-transform: uppercase; letter-spacing: -0.02em; margin-bottom: 2rem;
 }
@@ -1334,7 +1334,7 @@ body::after {
   width: calc(100% + 3rem); margin: -2rem -1.5rem 1.5rem;
   aspect-ratio: 4/5; overflow: hidden; background: rgba(255,255,255,0.06);
   display: flex; align-items: center; justify-content: center;
-  font-family: var(--font-display); font-size: 3rem; color: rgba(255,255,255,0.2);
+  font-family: var(--font-display); font-weight: 800; font-size: 3rem; color: rgba(255,255,255,0.2);
   letter-spacing: -0.02em; font-weight: 900; text-transform: uppercase;
 }
 .teacher-card-photo img {
@@ -1349,7 +1349,7 @@ body::after {
 }
 
 .teacher-name {
-  font-family: var(--font-display);
+  font-family: var(--font-display); font-weight: 800;
   font-size: 1.25rem; text-transform: uppercase;
   letter-spacing: -0.01em; color: var(--text); margin-bottom: 0.3rem; line-height: 1.1;
 }
@@ -1392,7 +1392,7 @@ body::after {
   width: 100%; aspect-ratio: 3/4; max-height: 340px;
   background: rgba(255,255,255,0.06); border: 1px solid rgba(11,200,240,0.2);
   display: flex; align-items: center; justify-content: center;
-  font-family: var(--font-display); font-size: 4rem; color: rgba(255,255,255,0.15);
+  font-family: var(--font-display); font-weight: 800; font-size: 4rem; color: rgba(255,255,255,0.15);
   overflow: hidden; margin-bottom: 0.5rem;
 }
 .teacher-avatar-xl img {
@@ -1400,7 +1400,7 @@ body::after {
 }
 
 .teacher-profile-name {
-  font-family: var(--font-display); font-size: 1.6rem;
+  font-family: var(--font-display); font-weight: 800; font-size: 1.6rem;
   text-transform: uppercase; letter-spacing: -0.01em; color: var(--text); line-height: 1.1;
 }
 
@@ -1410,7 +1410,7 @@ body::after {
 }
 
 .teacher-detail-copy h2 {
-  font-family: var(--font-display);
+  font-family: var(--font-display); font-weight: 800;
   font-size: clamp(2rem, 3.5vw, 3.5rem);
   text-transform: uppercase; letter-spacing: -0.02em; margin-bottom: 1.5rem;
 }
@@ -1430,7 +1430,7 @@ body::after {
 }
 
 .splan-day-name {
-  font-family: var(--font-display);
+  font-family: var(--font-display); font-weight: 800;
   font-size: clamp(1.75rem, 3vw, 3rem);
   text-transform: uppercase; letter-spacing: -0.01em; color: var(--text);
 }
@@ -1489,7 +1489,7 @@ body::after {
 }
 
 .event-day {
-  font-family: var(--font-display); font-size: 2.25rem;
+  font-family: var(--font-display); font-weight: 800; font-size: 2.25rem;
   line-height: 1; color: var(--accent);
 }
 
@@ -1512,7 +1512,7 @@ body::after {
 .event-type-badge.popup       { background: rgba(251,191,36,0.1); color: #FCD34D; border: 1px solid rgba(251,191,36,0.2); }
 
 .event-title {
-  font-family: var(--font-display); font-size: 1.3rem;
+  font-family: var(--font-display); font-weight: 800; font-size: 1.3rem;
   text-transform: uppercase; letter-spacing: -0.01em;
   color: var(--text); margin-bottom: 0.5rem; line-height: 1.1;
 }
@@ -1541,9 +1541,9 @@ body::after {
 /* ── 768px ─────────────────────────────────────────────────── */
 @media (max-width: 768px) {
 
-  /* layout */
+  /* layout — more editorial breathing room */
   .container { width: calc(100% - 2.5rem); }
-  .section   { padding: 4.5rem 0; }
+  .section   { padding: 6rem 0; }
 
   /* hero — single column, natural DOM order: text → video → meta */
   .hero-inner {
@@ -1553,41 +1553,43 @@ body::after {
       "text"
       "video"
       "meta";
-    gap: 1.5rem;
-    padding-top: 5rem;
-    padding-bottom: 2.5rem;
+    gap: 2.5rem;
+    padding-top: 6rem;
+    padding-bottom: 3.5rem;
     min-height: 0;
   }
 
   .hero { min-height: 100dvh; justify-content: center; }
 
   .title-line {
-    font-size: clamp(3.2rem, 16vw, 6rem);
+    font-size: clamp(3.5rem, 17vw, 6rem);
     letter-spacing: -0.03em;
+    line-height: 0.9;
   }
   .title-line.stroke { -webkit-text-stroke: 1.5px var(--accent); }
 
-  .hero-eyebrow { font-size: 0.68rem; margin-bottom: 0.75rem; }
+  .hero-eyebrow { font-size: 0.68rem; margin-bottom: 1.25rem; letter-spacing: 0.28em; }
   .hero-title   { margin-bottom: 0; }
   .hero-meta    { max-width: 100%; }
-  .hero-desc    { font-size: 0.9rem; line-height: 1.7; margin-bottom: 1.5rem; }
+  .hero-desc    { font-size: 1rem; line-height: 1.8; margin-bottom: 2rem; }
 
   .hero-video { aspect-ratio: 16/9; }
 
-  .hero-ctas { gap: 0.6rem; }
-  .btn-primary, .btn-ghost { width: 100%; justify-content: center; font-size: 0.85rem; padding: 1rem 1.5rem; }
+  .hero-ctas { gap: 0.75rem; }
+  .btn-primary, .btn-ghost { width: 100%; justify-content: center; font-size: 0.88rem; padding: 1.1rem 1.5rem; }
 
   /* ticker */
   .ticker-wrap { font-size: 0.65rem; }
 
   /* sections */
-  .section-header { margin-bottom: 2.5rem; }
-  .section-header h2 { font-size: clamp(2rem, 10vw, 3.5rem); }
-  .pillars-heading   { font-size: clamp(2rem, 10vw, 3.5rem); }
+  .section-header { margin-bottom: 3rem; }
+  .section-header h2 { font-size: clamp(2.2rem, 10vw, 3.8rem); }
+  .pillars-heading   { font-size: clamp(2.2rem, 10vw, 3.8rem); }
 
   /* studio stats */
-  .studio-grid { gap: 2.5rem; }
-  .studio-stats { grid-template-columns: 1fr 1fr; }
+  .studio-grid { gap: 3.5rem; }
+  .studio-stats { grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .stat-card { padding: 2rem 1.5rem; }
   .stat-num { font-size: clamp(2.5rem, 12vw, 4rem); }
 
   /* grids → single column */
@@ -1595,36 +1597,40 @@ body::after {
   .crews-page .crews-full-grid, .teachers-grid,
   .events-grid { grid-template-columns: 1fr; }
 
-  .news-grid    { grid-template-columns: 1fr; }
-  .preise-grid  { grid-template-columns: 1fr 1fr; }
+  .news-grid    { grid-template-columns: 1fr; gap: 1.25rem; }
+  .preise-grid  { grid-template-columns: 1fr 1fr; gap: 0.75rem; }
 
   /* heute/schedule cards */
   .heute-grid, .splan-grid { grid-template-columns: 1fr; gap: 2rem; }
-  .heute-card { padding: 1rem; }
+  .heute-card { padding: 1.25rem 1rem; }
   .teacher-avatar { width: 52px; height: 52px; font-size: 0.85rem; }
 
   /* teacher cards */
-  .teachers-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
-  .teacher-card  { padding: 1.5rem 1rem; }
-  .teacher-card-photo { width: calc(100% + 2rem); margin: -1.5rem -1rem 1rem; }
-  .teacher-name { font-size: 1rem; }
+  .teachers-grid { grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+  .teacher-card  { padding: 1.75rem 1.25rem; }
+  .teacher-card-photo { width: calc(100% + 2.5rem); margin: -1.75rem -1.25rem 1.5rem; }
+  .teacher-name { font-size: 1.05rem; }
 
   /* page hero */
-  .page-hero    { padding: 5rem 0 3rem; }
-  .page-hero h1 { font-size: clamp(2.5rem, 12vw, 5rem); }
+  .page-hero    { padding: 6rem 0 4rem; }
+  .page-hero h1 { font-size: clamp(2.8rem, 12vw, 5rem); }
 
   /* pillars grid */
-  .pillars-grid { grid-template-columns: 1fr; }
-  .pillar-card  { padding: 1.75rem 1.25rem; }
+  .pillars-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .pillar-card  { padding: 2rem 1.5rem; }
 
   /* crews */
-  .crew-card  { padding: 1.5rem 1.25rem; }
+  .crews-grid { gap: 1.25rem; }
+  .crew-card  { padding: 2rem 1.5rem; }
 
   /* preise */
   .preise-card { padding: 1.75rem 1.25rem; }
 
+  /* contact */
+  .contact-grid { gap: 3rem; }
+
   /* footer */
-  .footer-inner  { grid-template-columns: 1fr; gap: 2rem; }
+  .footer-inner  { grid-template-columns: 1fr; gap: 2.5rem; }
   .footer-copy   { text-align: left; }
 
   /* menu overlay */
@@ -1635,20 +1641,23 @@ body::after {
 
 /* ── 480px ─────────────────────────────────────────────────── */
 @media (max-width: 480px) {
-  .container { width: calc(100% - 2rem); }
-  .section   { padding: 3.5rem 0; }
+  .container { width: calc(100% - 1.75rem); }
+  .section   { padding: 5rem 0; }
 
-  .title-line { font-size: clamp(2.8rem, 17vw, 5rem); letter-spacing: -0.03em; }
+  .title-line { font-size: clamp(3rem, 18vw, 5.5rem); letter-spacing: -0.03em; }
 
   .teachers-grid { grid-template-columns: 1fr; }
   .preise-grid   { grid-template-columns: 1fr; }
 
+  .hero-inner { gap: 2rem; padding-top: 5.5rem; }
   .hero-ctas { flex-direction: column; }
 
-  .stat-card { padding: 1.25rem; }
-  .stat-num  { font-size: clamp(2rem, 13vw, 3.5rem); }
+  .stat-card { padding: 1.75rem 1.25rem; }
+  .stat-num  { font-size: clamp(2.2rem, 13vw, 3.5rem); }
 
-  .news-card-body { padding: 1.25rem; }
+  .news-card-body { padding: 1.5rem; }
+
+  .pillar-card { padding: 1.75rem 1.25rem; }
 
   .preise-footer  { flex-direction: column; gap: 1rem; }
   .teacher-detail-grid { grid-template-columns: 1fr; }
