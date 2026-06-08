@@ -505,6 +505,35 @@ function initContactForm(formId, statusId) {
   });
 }
 
+// ── WORD SPLIT REVEAL ─────────────────────────────────────────
+function splitWords(el) {
+  const words = el.textContent.trim().split(/\s+/).filter(Boolean);
+  el.innerHTML = words
+    .map((w, i) => `<span class="word-wrap"><span class="word" style="--w:${i}">${w}</span></span>`)
+    .join(' ');
+}
+
+// ── NUMBER COUNTER ANIMATION ──────────────────────────────────
+function animateCounter(el) {
+  const raw    = el.textContent.trim();
+  const match  = raw.match(/^(\d+)(.*)$/);
+  if (!match) return; // e.g. "∞" — skip
+  const target = parseInt(match[1], 10);
+  const suffix = match[2] || '';
+  const dur    = Math.min(1400, 600 + target * 6);
+  const start  = performance.now();
+
+  el.classList.add('counting');
+
+  (function tick(now) {
+    const p       = Math.min((now - start) / dur, 1);
+    const eased   = 1 - Math.pow(1 - p, 3);
+    el.textContent = Math.round(eased * target) + suffix;
+    if (p < 1) requestAnimationFrame(tick);
+    else el.textContent = target + suffix;
+  })(start);
+}
+
 // ── INIT ──────────────────────────────────────────────────────
 function initShared() {
   document.documentElement.lang = getLang();
@@ -562,12 +591,28 @@ function initShared() {
     window.location.href = langUrl(getLang() === 'de' ? 'en' : 'de')
   );
 
+  // Word split — run on static (non-i18n) elements before observer setup
+  document.querySelectorAll('[data-split="words"]').forEach(el => splitWords(el));
+
+  // Stagger-reveal — assign --si index to each child
+  document.querySelectorAll('.stagger-reveal').forEach(grid => {
+    Array.from(grid.children).forEach((child, i) => child.style.setProperty('--si', i));
+  });
+
   // Scroll reveal — rootMargin so elements start animating before fully in view
   const ro = new IntersectionObserver(entries =>
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); ro.unobserve(e.target); }}),
     { threshold: 0, rootMargin: '0px 0px 120px 0px' }
   );
   document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
+
+
+  // Counter animation on stat numbers
+  const counterObs = new IntersectionObserver(entries =>
+    entries.forEach(e => { if (e.isIntersecting) { animateCounter(e.target); counterObs.unobserve(e.target); }}),
+    { threshold: 0.5 }
+  );
+  document.querySelectorAll('.stat-num').forEach(el => counterObs.observe(el));
 
   // Immediately reveal elements already in (or just below) the viewport on load
   requestAnimationFrame(() => {
