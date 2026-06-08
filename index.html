@@ -8,7 +8,7 @@
   <title>NDC Basel | New Dance Center</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Figtree:wght@400;500;600;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
@@ -214,6 +214,56 @@
       </div>
     </section>
 
+    <!-- ── CONTACT ───────────────────────────────────────────── -->
+    <section class="section contact-section reveal" id="kontakt">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info">
+            <p class="eyebrow" data-i18n="kontakt_eyebrow">Kontakt</p>
+            <h2 data-i18n="kontakt_heading">Komm zu uns.</h2>
+            <div class="contact-block">
+              <span class="contact-label" data-i18n="kontakt_address">Adresse</span>
+              <p>Zwingerstrasse 12<br>4053 Basel</p>
+            </div>
+            <div class="contact-block">
+              <span class="contact-label" data-i18n="kontakt_phone">Telefon</span>
+              <p><a href="tel:+41793207688">+41 79 320 76 88</a></p>
+            </div>
+            <div class="contact-block">
+              <span class="contact-label" data-i18n="kontakt_email">E-Mail</span>
+              <p><a href="mailto:jasminweder@magnet.ch">jasminweder@magnet.ch</a></p>
+            </div>
+          </div>
+          <form class="contact-form" id="contactFormHome" novalidate>
+            <div class="form-group">
+              <label for="home-name" data-i18n="form_name">Name</label>
+              <input type="text" id="home-name" name="name" required
+                     data-i18n-placeholder="form_name_ph" placeholder="Dein Name">
+            </div>
+            <div class="form-group">
+              <label for="home-email" data-i18n="form_email">E-Mail</label>
+              <input type="email" id="home-email" name="email" required
+                     data-i18n-placeholder="form_email_ph" placeholder="name@beispiel.ch">
+            </div>
+            <div class="form-group">
+              <label for="home-interest" data-i18n="form_interest">Ich interessiere mich für</label>
+              <input type="text" id="home-interest" name="interest"
+                     data-i18n-placeholder="form_interest_ph"
+                     placeholder="z.B. Teenie Hip Hop, Commercial, Probestunde …">
+            </div>
+            <div class="form-group">
+              <label for="home-message" data-i18n="form_message">Nachricht</label>
+              <textarea id="home-message" name="message" rows="4"
+                        data-i18n-placeholder="form_msg_ph"
+                        placeholder="Erzähl uns von dir oder deinem Kurswunsch"></textarea>
+            </div>
+            <button type="submit" class="btn-primary" data-i18n="form_submit">Nachricht senden</button>
+            <p class="form-status" id="formStatusHome"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <div id="footer-root"></div>
@@ -221,5 +271,6 @@
   <script src="scripts/data.js"></script>
   <script src="scripts/shared.js"></script>
   <script src="scripts/main.js"></script>
+  <script>initContactForm('contactFormHome', 'formStatusHome');</script>
 </body>
 </html>

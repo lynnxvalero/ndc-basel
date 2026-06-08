@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cormorant+Garamond:ital,wght@1,400;1,600&family=Figtree:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Figtree:wght@400;500;600;700&family=Syne:wght@400;700;800&display=swap');
 
 :root {
   --bg:            #0a0a0a;
@@ -13,7 +13,7 @@
   --border:        rgba(255, 255, 255, 0.1);
   --font-display: 'Archivo Black', Impact, sans-serif;
   --font-body:    'Figtree', system-ui, -apple-system, sans-serif;
-  --font-serif:   'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --font-accent:  'Syne', system-ui, sans-serif;
   /* room colours */
   --room-blau:   #60A5FA;
   --room-gruen:  #4ADE80;
@@ -113,9 +113,9 @@ body::after {
   -webkit-text-fill-color: transparent;
 }
 
-.text-serif {
-  font-family: var(--font-serif);
-  font-style: italic;
+.text-accent {
+  font-family: var(--font-accent);
+  font-weight: 800;
 }
 
 /* ── WORD-SPLIT REVEAL ──────────────────────────────────────── */
@@ -323,12 +323,11 @@ body::after {
 
 .eyebrow {
   display: inline-block;
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-weight: 400;
-  font-size: 1.1rem;
-  letter-spacing: 0.02em;
-  text-transform: none;
+  font-family: var(--font-accent);
+  font-weight: 700;
+  font-size: 0.68rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
   color: var(--accent);
   margin-bottom: 1rem;
 }
@@ -437,9 +436,9 @@ body::after {
 .hero-meta  { grid-area: meta; }
 
 .hero-eyebrow {
-  font-family: var(--font-serif);
-  font-style: italic; font-weight: 400;
-  font-size: 1.15rem; letter-spacing: 0.02em; text-transform: none;
+  font-family: var(--font-accent);
+  font-weight: 700;
+  font-size: 0.68rem; letter-spacing: 0.35em; text-transform: uppercase;
   color: var(--accent); margin-bottom: 1.5rem;
   animation: heroIn 0.8s var(--spring) 80ms both;
 }
