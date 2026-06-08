@@ -484,7 +484,7 @@ body::after {
   flex: 1;
   display: grid;
   grid-template-columns: 3fr 2fr;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: auto auto;
   grid-template-areas:
     "text  video"
     "meta  video";
@@ -496,7 +496,7 @@ body::after {
 }
 
 .hero-text  { grid-area: text; }
-.hero-video { grid-area: video; align-self: center; }
+.hero-video { grid-area: video; align-self: stretch; }
 .hero-meta  { grid-area: meta; }
 
 .hero-eyebrow {
@@ -524,7 +524,7 @@ body::after {
   display: block;
   font-family: var(--font-display);
   font-weight: 900; font-style: italic;
-  font-size: var(--text-hero);
+  font-size: clamp(2.8rem, 7vw, 7.5rem);
   line-height: 0.88; letter-spacing: -0.02em; text-transform: uppercase;
 }
 
@@ -558,9 +558,9 @@ body::after {
 
 .hero-video {
   position: relative;
-  aspect-ratio: 4 / 5;
   overflow: hidden;
   background: var(--surface);
+  min-height: 320px;
 }
 
 .hero-video video,
@@ -796,9 +796,10 @@ body::after {
 }
 
 .crew-card h3 {
-  font-family: var(--font-display);
+  font-family: Impact, 'Arial Narrow', var(--font-display), sans-serif;
+  font-weight: 400; font-style: normal;
   font-size: clamp(2rem, 3vw, 3.5rem);
-  letter-spacing: -0.04em; text-transform: uppercase;
+  letter-spacing: 0.02em; text-transform: uppercase;
   color: var(--text); margin-bottom: var(--space-sm); line-height: 0.9;
 }
 
@@ -1233,6 +1234,14 @@ body::after {
   margin-bottom: var(--space-md);
 }
 
+/* Crew & showgroup name headings always use Impact */
+.crew-card h3,
+.crew-detail-copy h2,
+.page-hero h1.crew-name {
+  font-family: Impact, 'Arial Narrow', var(--font-display), sans-serif;
+  font-weight: 400; font-style: normal;
+}
+
 .page-hero-sub { font-size: 1rem; color: var(--muted); max-width: 44rem; line-height: 1.7; }
 
 .back-link {
@@ -1343,9 +1352,10 @@ body::after {
 .crew-detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
 
 .crew-detail-copy h2 {
-  font-family: var(--font-display);
-  font-size: clamp(2rem, 4vw, 4rem);
-  text-transform: uppercase; letter-spacing: -0.02em; margin-bottom: 2rem;
+  font-family: Impact, 'Arial Narrow', var(--font-display), sans-serif;
+  font-weight: 400; font-style: normal;
+  font-size: clamp(3rem, 6vw, 7rem);
+  text-transform: uppercase; letter-spacing: 0.02em; margin-bottom: 2rem; line-height: 0.88;
 }
 
 .crew-detail-copy p { color: var(--muted); line-height: 1.75; font-size: 0.975rem; margin-bottom: 1.5rem; }
