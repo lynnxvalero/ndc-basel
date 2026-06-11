@@ -161,6 +161,23 @@ const NDC_I18N = {
     // Preise page
     preise_policy_heading_label:'Abo-Konditionen',
     preise_book_cta:'Gratis Probestunde buchen',
+    // Über uns page
+    about_eyebrow:'Über uns', about_heading:'Das NDC Basel.',
+    about_history_title:'Geschichte',
+    about_history_text:'Das New Dance Center Basel wurde von Jasmin Weder Wessels gegründet und ist seit über 25 Jahren ein fester Bestandteil der Basler Tanzszene. Was als kleines Studio begann, ist heute eine lebendige Community mit Hunderten von Schüler:innen, mehreren Showgruppen und einem Team leidenschaftlicher Coaches.',
+    about_philosophy_title:'Philosophie',
+    about_philosophy_text:'Bei NDC Basel steht die Community im Mittelpunkt. Wir glauben, dass Tanzen für alle zugänglich sein sollte – deshalb bieten wir flexible Kurse ohne Jahresvertrag an. Verpasste Stunden können nachgeholt werden, und jede:r darf vor der Anmeldung kostenlos reinschnuppern.',
+    about_location_title:'Standort',
+    about_location_text:'Unsere zwei professionellen Trainingsräume befinden sich an der Zwingerstrasse 12 in 4053 Basel. Der Raum Blau und der Raum Grün bieten optimale Voraussetzungen für alle Stile und Gruppen.',
+    about_team_title:'Das Team',
+    about_team_text:'Unser Coach-Team besteht aus erfahrenen Tänzer:innen und Pädagog:innen, die ihre Leidenschaft täglich weitergeben.',
+    about_team_link:'Alle Coaches →',
+    // Crews page (legacy)
+    crews_page_eyebrow:'Show-Teams', crews_page_heading:'Unsere Crews.',
+    crews_page_sub:'Von der Nachwuchsgruppe bis zur Elite – NDC Basel hat ein Team für jede Ambition.',
+    // Teachers page (legacy)
+    teachers_page_eyebrow:'Das Team', teachers_page_heading:'Unsere Coaches.',
+    teachers_page_sub:'Leidenschaftliche Tänzer:innen und Pädagog:innen, die ihr Wissen täglich weitergeben.',
     // Footer
     footer_address:'Zwingerstrasse 12, 4053 Basel',
   },
@@ -301,6 +318,23 @@ const NDC_I18N = {
     // Preise page
     preise_policy_heading_label:'Membership conditions',
     preise_book_cta:'Book free trial class',
+    // Über uns page
+    about_eyebrow:'About', about_heading:'NDC Basel.',
+    about_history_title:'History',
+    about_history_text:'New Dance Center Basel was founded by Jasmin Weder Wessels and has been a fixture of the Basel dance scene for over 25 years. What began as a small studio is today a vibrant community with hundreds of students, several show groups and a team of passionate coaches.',
+    about_philosophy_title:'Philosophy',
+    about_philosophy_text:'At NDC Basel, community comes first. We believe dance should be accessible to everyone – that is why we offer flexible classes with no annual contract. Missed classes can be made up, and everyone can try a class for free before signing up.',
+    about_location_title:'Location',
+    about_location_text:'Our two professional training rooms are located at Zwingerstrasse 12 in 4053 Basel. The Blue Room and the Green Room offer ideal conditions for all styles and groups.',
+    about_team_title:'The Team',
+    about_team_text:'Our coaching team is made up of experienced dancers and educators who share their passion every day.',
+    about_team_link:'All coaches →',
+    // Crews page (legacy)
+    crews_page_eyebrow:'Show Teams', crews_page_heading:'Our Crews.',
+    crews_page_sub:'From the junior group to the elite – NDC Basel has a team for every ambition.',
+    // Teachers page (legacy)
+    teachers_page_eyebrow:'The Team', teachers_page_heading:'Our Coaches.',
+    teachers_page_sub:'Passionate dancers and educators who pass on their knowledge every day.',
     // Footer
     footer_address:'Zwingerstrasse 12, 4053 Basel',
   },

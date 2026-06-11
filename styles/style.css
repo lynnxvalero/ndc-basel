@@ -791,8 +791,8 @@ body::after {
 }
 
 .crew-card h3 {
-  font-family: Impact, 'Arial Narrow', var(--font-display), sans-serif;
-  font-weight: 400; font-style: normal;
+  font-family: var(--font-display);
+  font-weight: 900; font-style: normal;
   font-size: clamp(2rem, 3vw, 3.5rem);
   letter-spacing: 0.02em; text-transform: uppercase;
   color: var(--text); margin-bottom: var(--space-sm); line-height: 0.9;
@@ -1229,12 +1229,12 @@ body::after {
   margin-bottom: var(--space-md);
 }
 
-/* Crew & showgroup name headings always use Impact */
+/* Crew & showgroup name headings use the condensed display face */
 .crew-card h3,
 .crew-detail-copy h2,
 .page-hero h1.crew-name {
-  font-family: Impact, 'Arial Narrow', var(--font-display), sans-serif;
-  font-weight: 400; font-style: normal;
+  font-family: var(--font-display);
+  font-weight: 900; font-style: normal;
 }
 
 .page-hero-sub { font-size: 1rem; color: var(--muted); max-width: 44rem; line-height: 1.7; }
@@ -1347,8 +1347,8 @@ body::after {
 .crew-detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
 
 .crew-detail-copy h2 {
-  font-family: Impact, 'Arial Narrow', var(--font-display), sans-serif;
-  font-weight: 400; font-style: normal;
+  font-family: var(--font-display);
+  font-weight: 900; font-style: normal;
   font-size: clamp(3rem, 6vw, 7rem);
   text-transform: uppercase; letter-spacing: 0.02em; margin-bottom: 2rem; line-height: 0.88;
 }
