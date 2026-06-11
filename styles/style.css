@@ -531,8 +531,7 @@ body::after {
 
 /* Hero title — staggered line-up entrance */
 .hero-title .title-line:nth-child(1) { animation: heroIn 1s var(--spring) 180ms both; }
-.hero-title .title-line:nth-child(2) { animation: heroIn 1s var(--spring) 330ms both; }
-.hero-title .title-line:nth-child(3) { animation: heroIn 1s var(--spring) 480ms both; }
+.hero-title .title-line:nth-child(2) { animation: heroIn 1s var(--spring) 380ms both; }
 
 .hero-meta { max-width: 420px; }
 
@@ -705,7 +704,7 @@ body::after {
   font-size: clamp(2.5rem, 5vw, 5rem);
   line-height: 0.9;
   letter-spacing: -0.02em;
-  font-weight: 900;
+  font-weight: 700;
   text-transform: uppercase;
 }
 
@@ -1635,7 +1634,7 @@ body::after {
   .hero-eyebrow { margin-bottom: var(--space-md); }
   .hero-meta    { max-width: 100%; }
   .hero-desc    { max-width: 100%; font-size: var(--text-base); }
-  .hero-video   { aspect-ratio: 16/9; }
+  .hero-video   { aspect-ratio: 16/9; margin-top: var(--space-lg); }
   .hero-ctas    { gap: var(--space-sm); }
   .btn-primary, .btn-ghost { width: 100%; justify-content: center; padding: 1.1rem 2rem; }
 
@@ -1670,6 +1669,8 @@ body::after {
   .teachers-grid { grid-template-columns: repeat(2, 1fr); gap: var(--space-md); }
   .teacher-card  { padding: var(--space-lg) var(--space-md); }
   .teacher-card-photo { width: calc(100% + var(--space-lg) * 2); margin: calc(-1 * var(--space-lg)) calc(-1 * var(--space-md)) var(--space-md); }
+  .teacher-name  { font-size: 1.5rem; }
+  .teacher-card .teacher-role { display: none; }
 
   /* Page hero */
   .page-hero    { padding: var(--space-2xl) 0 var(--space-xl); }

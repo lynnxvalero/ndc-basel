@@ -139,7 +139,7 @@ const NDC_I18N = {
     event_type_workshop:'Workshop',
     event_type_popup:'Pop-up',
     // Index page static keys
-    title_1:'MEHR ALS', title_2:'EIN', title_3:'STUDIO.',
+    title_1:'MEHR ALS', title_2:'EIN STUDIO.',
     cta_schedule:'Stundenplan',
     studio_eyebrow:'Das Studio',
     studio_heading:'Hip Hop, Afro & Urban Dance – mitten in Basel.',
@@ -296,7 +296,7 @@ const NDC_I18N = {
     event_type_workshop:'Workshop',
     event_type_popup:'Pop-up',
     // Index page static keys
-    title_1:'MEHR ALS', title_2:'EIN', title_3:'STUDIO.',
+    title_1:'MEHR ALS', title_2:'EIN STUDIO.',
     cta_schedule:'Schedule',
     studio_eyebrow:'The Studio',
     studio_heading:'Hip Hop, Afro & Urban Dance – in the heart of Basel.',
